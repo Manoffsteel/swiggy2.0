@@ -1,0 +1,25 @@
+
+
+head ka proxy
+
+axios.get(`http://localhost:5009/api/address-recommend`, {
+        params: { place_id: id }
+
+        axios.get(`http://localhost:5009/api/place-autocomplete`, {
+        params: { input: val }
+
+
+        resmenu ka 
+        axios.get(`http://localhost:5009/api/menu`, {
+        params: { lat, lng, restaurantId: mainid }
+    })
+
+    for sersch 2
+    await axios.get(`http://localhost:5010/api/restaurants/search/pl`, {
+        params: { lat, lng, str: searchQuery }
+    })
+
+    for srch 1
+    await axios.get(`http://localhost:5010/api/restaurants/search`, {
+        params: { lat, lng, str: searchQuery }
+    })
