@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+const key = import.meta.env.VITE_RAZORPAY_KEY_ID;
 
 const RazorpayButton = ({ amount }) => {
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,13 @@ const RazorpayButton = ({ amount }) => {
 
       if (data.id) {
         const options = {
-          key: "rzp_test_62lfJDM065Qw88", // Replace with your Razorpay key ID
+          // key: "rzp_test_62lfJDM065Qw88", 
+          // Replace with your Razorpay key ID
+          // key: "rzp_test_8W21nCOmu1eVOx", 
+          // key_id: process.env.RAZORPAY_KEY_ID,
+          key, // short for key: key
+          
+
           amount: amountInPaisa,
           currency: "INR",
           name: "Ankit",
@@ -73,4 +80,5 @@ const RazorpayButton = ({ amount }) => {
 };
 
 export default RazorpayButton;
+
 
