@@ -22,7 +22,7 @@ const RazorpayButton = ({ amount }) => {
 
     const amountInPaisa = Math.round(amount); 
     try {
-      const response = await fetch("https://swiggyfoodorderingapplication.vercel.app/create-order", {
+      const response = await fetch("http://localhost:5003/create-order",  {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
